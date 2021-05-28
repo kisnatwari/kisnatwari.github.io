@@ -187,7 +187,7 @@ $(document).ready(function(){
         var mode = $(this).attr("mode");
         if(mode == "dark"){
             $(this).attr("mode","light");
-            $(".home-img").attr("src",window.light_image);
+            $(".home-img").attr("src","images/img-light-green-1.png");
             $("#mode").attr("href","style/white.css");
             $(".mode-switch i").css({
                 "color":"#191623",
@@ -197,7 +197,7 @@ $(document).ready(function(){
         }
          else if(mode == "light"){
             $(this).attr("mode","dark");
-            $(".home-img").attr("src",window.dark_image);
+            $(".home-img").attr("src","images/img-dark-blue.png");
             $("#mode").attr("href","style/dark.css");
             $(".mode-switch i").css({
                 "color":"#ECFFF4",
