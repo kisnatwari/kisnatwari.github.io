@@ -229,7 +229,7 @@ var img = new Image();
 img.src = "images/20210220_000849.jpg";
 img.addEventListener('load', function (event) {
    const dataUrl = getDataUrl(event.currentTarget);
-   $(".bg-img-1").css("backgroundImage","url("+dataUrl+")");
+   document.querySelector(".bg-img-1").style.backgroundImage = "url("+dataUrl+")";
    console.log("done");
    console.log(dataUrl);
 });
