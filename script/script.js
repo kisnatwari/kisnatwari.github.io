@@ -1,13 +1,7 @@
 window.onload = function() {
-    var dark_img = new Image();
-    dark_img.src = "images/20210220_000849.jpg";
-    dark_img.addEventListener('load', function(event) {
-        const dataUrl = getDataUrl(event.currentTarget);
-        console.log("done");
-    });
-
-}
 getSavedImg();
+}
+
 
 function getSavedImg() {
     if (localStorage.getItem("light_img") != null && localStorage.getItem("dark_img") != null && localStorage.getItem("img_1") != null && localStorage.getItem("img_2") != null) {
