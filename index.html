@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krishna Tiwari</title>
-    <link rel="icon" href="images/img2.jpg">
+    <link rel="icon" href="images/favicon.jpeg">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/dark.css" id="mode">
     <link rel="stylesheet" href="style/animate.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -20,83 +21,88 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="200">
-    <div class="container-fluid p-0 bg-dark" style="min-height: 100vh">
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark px-5 shadow-lg position-fixed w-100" style="z-index: 3">
-            <a class="navbar-brand mname" href="#">
-                <img src="images/img2.jpg" alt="logo" width="35" class="rounded-circle">
+            <div class="mode-switch ui-widget-content" mode="dark" title="click to switch">
+            <i class="fa fa-adjust"></i>
+        </div>
+
+    <div class="container-fluid con-fl p-0" style="min-height: 100vh">
+
+
+        <nav class="navbar navbar-expand-md px-md-5 shadow-lg position-fixed w-100">
+            <a class="navbar-brand brand-name" href="#">
+                <img src="images/favicon.jpeg" alt="logo" width="35" class="rounded-circle">
                 &nbsp; Krishna Tiwari
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler py-0 pt-2" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="navbar-toggler-icon fa fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item text-cente">
-                        <a class="nav-link  px-3 active" href="#home"> <i class="fa fa-home"></i> &nbsp;Home</a>
+                    <li class="nav-item text-md-center">
+                        <a class="nav-link  px-3 active" href="#home"> <i class="fa fa-home"></i> Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link  px-3" href="#about"> <i class="fa fa-user"></i> &nbsp; About</a>
+                    <li class="nav-item text-md-center">
+                        <a class="nav-link  px-3" href="#about"> <i class="fa fa-user"></i> About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link  px-3" href="#services"> <i class="fa fa-briefcase"></i> &nbsp; Services</a>
+                    <li class="nav-item text-md-center">
+                        <a class="nav-link  px-3" href="#services"> <i class="fa fa-briefcase"></i> Services</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link  px-3" href="#"> <i class="fa fa-laptop"></i> &nbsp; Projects</a>
+                    <li class="nav-item text-md-center">
+                        <a class="nav-link  px-3" href="#"> <i class="fa fa-laptop"></i> Projects</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link  px-3" href="#contact"> <i class="fa fa-phone"></i> &nbsp; Contact</a>
+                    <li class="nav-item text-md-center">
+                        <a class="nav-link  px-3" href="#contact"> <i class="fa fa-phone"></i> Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <br>
-        <div class="home px-5 py-5" id="home">
+        <div class="home px-5 text--default" id="home">
             <div class="row d-flex align-items-center">
-                <div class="col-md-7 text-white py-5">
+                <div class="col-md-7 py-5">
                     <h5 class="transparent hi-text mb-3 animated">Hi, I'm Krishna.</h5>
                     <h2 class=" transparent home-bigtext mb-3 animated">I build Value Through Codes</h2>
                     <h6 class=" transparent home-smalltext animated">I am a programmer, not a pro-programmer. </h6>
-                    <h6 class="transparent home-smalltext animated">In fact I am an IT student from Nepal &nbsp;<img src="images/Flag_of_Nepal.png" alt="Nepali flag" height="25">.</h6>
-                    <button class="d-none btn bg-mycol">Learn More</button>
+                    <h6 class="transparent home-smalltext animated mb-4">In fact I am an IT student from Nepal &nbsp;<img src="images/Flag_of_Nepal1.png" alt="Nepali flag" height="25">.</h6>
+                    <button class="transparent btn more_btn animated">Learn More</button>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="images/img-dark-1.png" alt="" class="rounded-circle my-2 w-75 transparent home-img animated">
+                    <img src="images/img-dark-blue1.png" alt="" class="rounded-circle my-2 w-75 transparent home-img animated">
                 </div>
             </div>
         </div>
-        <div class="about p-5 text-light" id="about">
+        <div class="about p-3 p-md-4 w-100" id="about">
             <h3 class="text-center">About Me!</h3>
             <div class="row">
-                <div class="col-md-6 py-3 pl-5">
+                <div class="col-md-6 bg-img-1"></div>
+                <div class="col-md-6 py-4 px-5 pl-md-5">
                     <div class="education-container transparent animated">
                         <h3>Education</h3>
-                        <hr color="#35F8FF">
+                        <hr>
                         <div class="circle"></div>
                         <h5>10<sup>th</sup> Grade</h5>
                         <p class="mb-0">Shiva Secondary School (2073)</p>
                         <p class="mb-0">GPA : 3.25</p>
-                        <hr color="#35F8FF">
+                        <hr>
                         <div class="circle"></div>
                         <h5>12<sup>th</sup> Grade</h5>
                         <p class="mb-0">Shiva Secondary School (2076)</p>
                         <p class="mb-0">GPA : 3.14</p>
-                        <hr color="#35F8FF">
+                        <hr>
                         <div class="circle"></div>
                         <h5>Bachelor</h5>
                         <p class="mb-0">Lumbini ICT Campus (current)</p>
                         <p class="mb-0">GPA : 3.25</p>
-                        <hr color="#35F8FF">
+                        <hr>
                         <div class="circle"></div>
                         <h5>Diploma</h5>
                         <p class="mb-0">Wap Institute (Current)</p>
                         <p>Advanced Diploma In Software Engineering (ADSE)</p>
-                        <hr color="#35F8FF">
+                        <hr>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
-                <div class="col-md-6"></div>
                 <div class="col-md-6 skills-section">
-                    <div class="skill-container w-100">
+                    <div class="skill-container w-100 py-5">
                         <h3>My Skills</h3>
                         <div class="skill-slot skill-html color-F73030" skill="90">
                             <h5>HTML5 <span class="html-pct"></span></h5>
@@ -166,11 +172,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 bg-img-2"></div>
             </div>
         </div>
-        <div id="services" class=" text-center text-light px-5 py-5">
-            <h5 class="p-0 m-0">Services</h5>
-            <hr color="#35F8FF" style="width: 60px; height: 3px;" class="mx-auto">
+        <div id="services" class=" text-center px-5">
+            <h3 class="p-0 m-0">Services</h3>
+            <hr style="width: 60px; height: 3px;" class="mx-auto">
             <p>We satisfy our clients with various services of designing and developing a product</p>
             <div class="row">
                 <div class="col-md-4 p-2">
@@ -224,23 +231,24 @@
             </div>
         </div>
 
-        <div class="contact p-5 bg-dynamic" id="contact">
+        <div class="contact p-5" id="contact">
         	<div class="row">
         		<div class="col-md-4">
         			<form>
-        				<input type="text" placeholder="your name" class="form-control my-3 input-dark">
-        				<input type="email" placeholder="email" class="form-control my-3 input-dark">
-        				<textarea rows="5" class="form-control my-3 input-dark" placeholder="Your Message to Us"></textarea>
-        				<input type="submit" class="dynamic-btn">
+        				<input type="text" placeholder="your name" class="form-control my-2">
+        				<input type="email" placeholder="email" class="form-control my-2">
+        				<textarea rows="5" class="form-control my-2" placeholder="Your Message to Us"></textarea>
+        				<input type="submit" class="form-control">
         			</form>
         		</div>
-        		<div class="col-md-4 text-white text-center pt-3">
+        		<div class="col-md-4 text-center pt-3">
         			<h3>Follow me on Social Media</h3>
         			<div class="social-icons row">
-        				<div class="col-sm-6 p-5"><i class="fa fa-facebook"></i></div>
-        				<div class="col-sm-6 p-5"><i class="fa fa-instagram"></i></div>
-        				<div class="col-sm-6 p-5"><i class="fa fa-twitter"></i></div>
-        				<div class="col-sm-6 p-5"><i class="fa fa-linkedin"></i></div>
+        				<div class="col-sm-6 p-2 icn"><i class="fa fa-facebook"></i></div>
+        				<div class="col-sm-6 p-2 icn"><i class="fa fa-instagram"></i></div>
+                        <div class="col-12 p-2 icn"><i class="fa fa-envelope"></i></div>
+        				<div class="col-sm-6 p-2 icn"><i class="fa fa-twitter"></i></div>
+        				<div class="col-sm-6 p-2 icn"><i class="fa fa-linkedin"></i></div>
         			</div>
         		</div>
         		<div class="col-md-4 p-3">
@@ -248,10 +256,10 @@
         				<h4 class="text-center mb-3"><u>Contact Details</u></h4>
         				<h6>Email : twarikisna@gmail.com</h6>
         				<h6>Contact: +977 9816439892</h6>
-        				<hr color="#35F8FF">
+        				<hr>
         				<h4 class="text-center mb-3"><u>Permanent Address</u></h4>
         				<h6>Address : Kawasoti - 6, Nawalpur</h6>
-        				<hr color="#35F8FF">
+        				<hr>
         				<h6>Website: krishnat.com.np</h6>
         				
         			</div>
