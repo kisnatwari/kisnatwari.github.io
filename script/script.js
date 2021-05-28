@@ -18,31 +18,31 @@ function getSavedImg() {
         }
         $(".bg-img-1").css("backgroundImage", "url(" + localStorage.getItem("img_1") + ")");
         $(".bg-img-2").css("backgroundImage", "url(" + localStorage.getItem("img_2") + ")");
-    } else {
-        var images = ["images/img-light-green-1.png", "images/img-dark-blue.png", "images/20210220_000849.jpg", "images/me.jpg"];
-        var store_names = ["light_img", "dark_img", "img_1", "img_2"];
-        var url_names = [];
-
+    } else{
         var img = new Image();
         img.src = "images/img-light-green-1.png";
         $(img).on("load", function(e) {
             var data_url = getDataUrl(event.currentTarget);
             localStorage.setItem("light_img", data_url);
+            console.log("Image 1 loaded");
             img = new Image();
             img.src = "images/img-dark-blue.png";
             $(img).on("load", function(e) {
                 data_url = getDataUrl(event.currentTarget);
                 localStorage.setItem("dark_img", data_url);
+                console.log("Image 2 loaded");
                 img = new Image();
                 img.src = "images/20210220_000849.jpg";
                 $(img).on("load", function(e) {
                     data_url = getDataUrl(event.currentTarget);
                     localStorage.setItem("img_1", data_url);
+                    console.log("Image 3 loaded");
                     img = new Image();
                     img.src = "images/me.jpg";
                     $(img).on("load", function(e) {
                         data_url = getDataUrl(event.currentTarget);
                         localStorage.setItem("img_2", data_url);
+                        console.log("Image 4 loaded");
                         localStorage.setItem("photo_date", new Date());
                         if ($(".mode-switch").attr("mode") == "dark") {
                             $(".home-img").attr("src", localStorage.getItem("dark_img"));
