@@ -1,5 +1,6 @@
 window.onload = function() {
 getSavedImg();
+switch_mode();
 }
 
 
