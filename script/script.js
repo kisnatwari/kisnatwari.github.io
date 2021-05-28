@@ -201,7 +201,7 @@ function switch_mode() {
             });
         } else if (mode == "light") {
             $(this).attr("mode", "dark");
-            $(".home-img").attr("src", "images/img-dark-blue.png");
+            $(".home-img").attr("src",  localStorage.getItem("dark_img"));
             $("#mode").attr("href", "style/dark.css");
             $(".mode-switch i").css({
                 "color": "#ECFFF4",
