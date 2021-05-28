@@ -1,4 +1,4 @@
-window.onload = function(){
+/*window.onload = function(){
     setTimeout(function(){
         load_bg("images/20210220_000849.jpg",".bg-img-1");
         load_bg("images/me.jpg",".bg-img-2");
@@ -6,7 +6,7 @@ window.onload = function(){
         dark_img();
     },2000)
 }
-
+*/
 function light_img(){
     var request = new XMLHttpRequest();
     request.open("POST","images/img-light-green-1.png",true);
