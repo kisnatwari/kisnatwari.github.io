@@ -1,3 +1,66 @@
+window.onload = function(){
+    setTimeout(function(){
+        load_bg("images/20210220_000849.jpg",".bg-img-1");
+        load_bg("images/me.jpg",".bg-img-2");
+        light_img();
+        dark_img();
+    },2000)
+}
+
+function light_img(){
+    var request = new XMLHttpRequest();
+    request.open("POST","images/img-light-green-1.png",true);
+    request.responseType = "blob";
+    request.send();
+    request.onload = function(){
+        window.light_image = URL.createObjectURL(this.response);
+        if($(".mode-switch").attr("mode") == "light"){
+             $(".home-img").attr("src",window.light_image);
+             console.log("done1");
+        }
+    }
+}
+
+function dark_img(){
+    var request = new XMLHttpRequest();
+    request.open("POST","images/img-dark-blue.png",true);
+    request.responseType = "blob";
+    request.send();
+    request.onload = function(){
+        console.log("1");
+        window.dark_image = URL.createObjectURL(this.response);
+        if($(".mode-switch").attr("mode") == "dark"){
+             $(".home-img").attr("src",window.dark_image);
+             console.log("done2");
+        }
+    }
+}
+
+function load_bg(img_path, container){
+     var request = new XMLHttpRequest();
+        request.open("POST",img_path,true);
+        request.responseType = "blob";
+        request.send();
+        request.onload = function(){
+            var url = URL.createObjectURL(this.response);
+            document.querySelector(container).style.backgroundImage = "url("+url+")";
+        }
+}
+
+
+
+function load_img(img_path, container){
+     var request = new XMLHttpRequest();
+        request.open("POST",img_path,true);
+        request.responseType = "blob";
+        request.send();
+        request.onload = function(){
+            var url = URL.createObjectURL(this.response);
+            document.querySelector(container).setAttribute("src",url);
+        }
+}
+
+
 //smooth scrolling
 $(document).ready(function(){
 	$(".navbar ul li a").click(function(e){
@@ -21,6 +84,9 @@ $(document).ready(function(){
 			$(".home-bigtext").addClass("fadeInRight");
 			setTimeout(function(){
 				$(".home-smalltext").addClass("fadeIn");
+                setTimeout(function(){
+                    $(".more_btn").addClass("fadeInUp");
+                },400)
 			},400)
 		},700)
 	},100)
@@ -93,8 +159,8 @@ $(document).ready(function(){
 	$(transparent_parts).each(function(){
 		$("."+this).addClass("transparent animated");
 	});
-	smoothShow("education-container","fadeInLeft");
-	smoothShow("skill-container","fadeInRight");
+	smoothShow("education-container","fadeInRight");
+	smoothShow("skill-container","fadeInLeft");
 	smoothShow("services-brand","jackInTheBox");
 	smoothShow("services-web","jackInTheBox");
 	smoothShow("services-software","jackInTheBox");
@@ -114,3 +180,32 @@ function smoothShow(class_name,effect){
 		}
 	})
 }
+
+
+$(document).ready(function(){
+    $(".mode-switch").draggable();
+    $(".mode-switch").click(function(){
+        var mode = $(this).attr("mode");
+        if(mode == "dark"){
+            $(this).attr("mode","light");
+            $(".home-img").attr("src",window.light_image);
+            $("#mode").attr("href","style/white.css");
+            $(".mode-switch i").css({
+                "color":"#191623",
+                "transform": "rotate(180deg)",
+                "transitionDuration":"0.5s"
+        });
+        }
+         else if(mode == "light"){
+            $(this).attr("mode","dark");
+            $(".home-img").attr("src",window.dark_image);
+            $("#mode").attr("href","style/dark.css");
+            $(".mode-switch i").css({
+                "color":"#ECFFF4",
+                "transform": "rotate(0deg)",
+                "transitionDuration":"0.5s"
+        });
+        }
+
+    })
+})
