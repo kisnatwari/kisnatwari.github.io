@@ -6,7 +6,6 @@
         dark_img();
     },2000)
 }
-*/
 function light_img(){
     var request = new XMLHttpRequest();
     request.open("POST","images/img-light-green-1.png",true);
@@ -59,7 +58,7 @@ function load_img(img_path, container){
             document.querySelector(container).setAttribute("src",url);
         }
 }
-
+*/
 
 //smooth scrolling
 $(document).ready(function(){
