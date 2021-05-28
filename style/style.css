@@ -8,19 +8,21 @@ body{
 	width: 100%;
 	overflow-x: hidden;
 }
-.mname{
-	color: #35F8FF !important;
+nav{
+	z-index: 3;
 }
 .transparent{
 	opacity: 0;
-}
-.nav-link{
-	color: #eee !important;
 }
 
 .nav-link.active{
 	color: #35F8FF !important;
 }
+.home{
+	padding-top: 150px;
+	padding-bottom: 120px;
+}
+
 .services-content{
 	height: 100%;
 	background-color: #FFFFFF10;
@@ -38,10 +40,6 @@ body{
 	transform: scale(1.03);
 }
 
-.bg-mycol{
-	background-color: #35F8FF !important;
-	color: white !important;
-}
 
 .anim-a{
 	position: absolute;
@@ -51,7 +49,6 @@ body{
 	height: 0%;
 	transition-duration: 0.4s;
 	z-index: -1;
-	background-color: #35F8FF;
 }
 
 .anim-b{
@@ -62,7 +59,10 @@ body{
 	height: 0%;
 	transition-duration: 0.4s;
 	z-index: -1;
-	background-color: #35F8FF;
+}
+#services{
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 .services-content:hover .anim-a, .services-content:hover .anim-b{
 	height: 100%;
@@ -85,8 +85,7 @@ body{
 	position: absolute;
 	left: 0;
 	transform: translateX(-50%);
-	background-color: #343A40;
-	border: solid #35F8FF 3px;
+	background-color: inherit;
 	border-radius: 50%;
 }
 
@@ -127,7 +126,6 @@ body{
 	top: 0;
 	right: 0;
 	transform: translate(60%,-30%);
-	border: solid #35F8FF 3px;
 	color: black;
 	font-size: 12px;
 	display: flex;
@@ -155,60 +153,48 @@ body{
 	max-width: 75%;
 }
 
-.input-dark{
-	box-shadow: 0 0 1px #35F8FF !important;
-	background-color: #00000050 !important;
-	border: none !important;
-	outline: none !important;
-	color: white !important;
-}
-
-.input-dark::placeholder{
-	color: #35F8FF80 !important;
-}
-.dynamic-btn{
-	width: 100%;
-	padding: 10px !important;
-	background-color: #35F8FF;
-	border: none;
-	color: white;
-}
-
-.input-dark::selection{
-	background-color: #35F8FFBB !important;
-}
-
 .social-icons i{
 	font-size: 50px;
 }
 
-.social-icons .col-sm-6:hover{
-	background-color: #41464C !important;
-	color: black !important;
+.social-icons .icn:hover{
 	border-radius: 20px;
 	cursor: pointer;
 }
 
-.social-icons .col-sm-6:hover i{
+.social-icons .icn:hover i{
 	transform: scale(1.2);
 	transition-duration: 0.3s;
-	color: #35F8FF;
-}
-.contact-details{
-}
-.bg-dynamic{
-	background-color: #41464C !important;
-	color: #F5F5F5 !important;
 }
 
-
-body::-webkit-scrollbar{
-	background-color: #41464C;
-	box-shadow: 0 0 5px #35F8FF inset;
-	width: 10px;
+.bg-img-1{
+	background-image: url(../images/pc.PNG);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 400px;
+	transition-duration: 1s;
+}
+.bg-img-2{
+	background-image: url(../images/me1.jpeg);
+	background-size: cover;
+	background-position: top center;
+	min-height: 400px;
+	transition-duration: 1s;
 }
 
-body::-webkit-scrollbar-thumb{
-	background-color: black;
-	box-shadow: 5px 0 3px #35F8FF inset;
+.mode-switch{
+	position: fixed;
+	z-index: 10000;
+	top: 100px;
+	left: 10px;
+	background-color: transparent !important;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none !important;
+}
+
+.mode-switch i{
+	color: #ECFFF4;
+	font-size: 50px;
 }
