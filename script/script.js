@@ -127,27 +127,27 @@ $(document).ready(function() {
                 $(".skill-html .prog-value").html(html);
                 $(".skill-html .prog-bar").animate({
                     "width": html,
-                }, 500, function() {
+                }, 300, function() {
                     $(".skill-css .prog-value").html(css)
                     $(".skill-css .prog-bar").animate({
                         "width": css
-                    }, 500, function() {
+                    }, 300, function() {
                         $(".skill-js .prog-value").html(js)
                         $(".skill-js .prog-bar").animate({
                             "width": js
-                        }, 500, function() {
+                        }, 300, function() {
                             $(".skill-bootstrap .prog-value").html(bootstrap)
                             $(".skill-bootstrap .prog-bar").animate({
                                 "width": bootstrap
-                            }, 500, function() {
+                            }, 300, function() {
                                 $(".skill-electron .prog-value").html(electron)
                                 $(".skill-electron .prog-bar").animate({
                                     "width": electron
-                                }, 500, function() {
+                                }, 300, function() {
                                     $(".skill-php .prog-value").html(php)
                                     $(".skill-php .prog-bar").animate({
                                         "width": php
-                                    }, 500)
+                                    }, 300)
                                 })
                             })
                         })
