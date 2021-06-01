@@ -1,0 +1,302 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	user-select: none;
+}
+
+body {
+	background-color: #000115;
+	color: white;
+}
+#loader-con{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: black;
+}
+#loader-con #loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+#left-slider, #right-slider{
+	width: 50%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	background-color: black;
+}
+#right-slider{
+	left: auto;
+	right: 0;
+}
+#cancel-loading{
+	position: absolute;
+	top: 70px;
+	right: 70px;
+	font-size: 30px;
+}
+#con {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 550px;
+	height: 550px;
+	border-radius: 20px;
+	transform: translate(-50%, -50%);
+	background-image: url(../images/wooden-pic.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#inner-con {
+	width: 89%;
+	height: 89%;
+	position: absolute;
+	top: 51%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.places {
+	width: 12%;
+	height: 12%;
+	box-shadow: inset 0 0 10px black;
+	border-radius: 10px;
+	position: absolute;
+	background-image: url(../images/wooden-pic.png);
+	background-size: contain;
+	z-index: 1;
+}
+
+.top-left {
+	top: 0;
+	left: 0;
+}
+
+.top-mid {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.top-right {
+	top: 0;
+	right: 0;
+}
+
+.center-left {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
+.center-mid {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center-right {
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.bottom-left {
+	bottom: 0;
+	left: 0;
+}
+
+.bottom-mid {
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bottom-right {
+	bottom: 0;
+	right: 0;
+}
+
+.token {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	user-select: none;
+}
+
+.p1 {
+	background-color: white;
+	color: black;
+	left: 20px;
+	border: inset black 2px;
+}
+
+.p2 {
+	right: 20px;
+	background-color: black;
+	color: white;
+	border: solid white 2px;
+}
+
+#game-details {
+	position: absolute;
+	height: 60px;
+	top: 80px;
+	z-index: 100;
+}
+#player-names,#time-move{
+	background-color: rgba(0,0,0,0.7);
+	float: left;
+	max-width: 150px;
+	padding: 10px;
+	height: 100%;
+	display: none;
+}
+#toggler {
+	font-size: 30px;
+	float: left;
+	cursor: pointer;
+	margin-right: 10px;
+	color: black;
+	margin-bottom: 30px;
+}
+
+.lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../images/wooden-pic.png);
+	background-size: contain;
+}
+
+.line1, .line2, .line3 {
+	height: 95%;
+	width: 20px;
+	top: 2.5%;
+}
+
+.line1 {
+	left: 20px;
+}
+
+.line2 {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.line3 {
+	left: 92%;
+}
+
+.line4, .line5, .line6 {
+	width: 95%;
+	left: 2.5%;
+	height: 20px;
+}
+
+.line4 {
+	top: 20px;
+}
+
+.line5 {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.line6 {
+	top: 92%;
+}
+
+.line7, .line8 {
+	width: 135%;
+	height: 20px;
+	top: 50%;
+	left: 50%;
+}
+
+.line7 {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.line8 {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+#places-bg {
+	position: absolute;
+	float: left;
+	display: none;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#game-finish-alert{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.92);
+	position: absolute;
+	z-index: 1000;
+	display: none;
+}
+#game-detail-dialog{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: auto;
+	height: auto;
+	border: #333 solid 1px;
+	box-shadow: 0 0 10px #ccc;
+	background-color: #000;
+	border-radius: 5px;
+	text-align: center;
+	padding: 20px;
+	display: none;
+}
+#game-finish-header{
+	text-decoration: underline;
+	margin-bottom: 20px;
+}
+#game-detail-dialog h3{
+	margin: 10px;
+}
+#btn-replay, #btn-back{
+	width: 170px;
+	height: 30px;
+	font-size: 20px;
+	display: block;
+	margin: 10px auto;
+	margin-bottom: 0;
+	font-family: Righteous, sans-serif;
+}
+@keyframes filter_animation {
+	0% {
+		filter: brightness(100%) saturate(100%);
+	}
+
+	50% {
+		filter: brightness(20%) saturate(120%);
+	}
+
+	100% {
+		filter: brightness(99%) saturate(99%);
+	}
+
+}
