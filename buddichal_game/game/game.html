@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../style/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="../style/animate.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style/game.css">
+		<!-- The following code blocks is taken from stackoverflow because previously jquery cdn doesnt work when file is packaged into electron -->
+
+		<!-- Insert this line above script imports  -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<!-- normal script imports etc  -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Insert this line after script imports -->
+		<script>if (window.module) module = window.module;</script>
+
+		<!-- The above code is taken form stackoverflow because jquery cdn doesn't work after packaging in electron -->
+		<script type="text/javascript" src="../script/jquery-ui.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="loader-con">
+			<i class="fa fa-eye-slash" id="cancel-loading" title="Abort Loading Screen"></i>
+			<div id="loader">
+				<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+				<span class="sr-only">Loading...</span>
+				<br><br>
+				<h3>Loading<br> Please wait..</h3>
+			</div>
+		</div>
+		<div id="left-slider"></div>
+		<div id="right-slider"></div>
+		<div id="game-finish-alert">
+			<div id="game-detail-dialog">
+				<h2 id="game-finish-header">Game Completed</h2>
+				<h3 id="game-players">Player1 vs Player2</h3>
+				<h3 id="winner">Winner :- <span id="winner-span">Player 1</span></h3>
+				<h3 id="total-time-taken">Total time taken :- <span id="time-span">0 seconds</span></h3>
+				<h3 id="total-moves">Total moves :- <span id="moves-span">0 moves</span></h3>
+				<button id="btn-replay">Replay [F5]</button>
+				<button id="btn-back">Back [Esc]</button>
+			</div>
+		</div>
+		<div id="con">
+			<div id="inner-con">
+				<div id="game-details">
+					<div id="toggler">
+						<i class="fa fa-arrow-circle-right" id="toggler-icon"></i>
+					</div>
+					<div id="player-names"></div>
+					<div id="time-move"><p>Moves: <span id="moves">0</span><br><p id="time">Time: 0 sec</p></p></div>
+				</div>
+				<div class="places top-left top left"></div>
+				<div class="places top-mid top mid"></div>
+				<div class="places top-right top right"></div>
+				<div class="places center-left center left"></div>
+				<div class="places center-mid center mid"></div>
+				<div class="places center-right center right"></div>
+				<div class="places bottom-left bottom left"></div>
+				<div class="places bottom-mid bottom mid"></div>
+				<div class="places bottom-right bottom right"></div>
+				<div class="lines line1"></div>
+				<div class="lines line2"></div>
+				<div class="lines line3"></div>
+				<div class="lines line4"></div>
+				<div class="lines line5"></div>
+				<div class="lines line6"></div>
+				<div class="lines line7"></div>
+				<div class="lines line8"></div>
+			</div>
+		</div>
+		<div class="token p1">P1</div>
+		<div class="token p1">P1</div>
+		<div class="token p1">P1</div>
+		<div class="token p2">P2</div>
+		<div class="token p2">P2</div>
+		<div class="token p2">P2</div>
+		<script type="text/javascript" src="script/game.js"></script>
+	</body>
+</html>
