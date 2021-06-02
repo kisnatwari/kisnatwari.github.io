@@ -133,4 +133,6 @@ fieldset legend{
 .skill-container, .education-section{
 	box-shadow: 0 0 10px var(--main);
 	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
