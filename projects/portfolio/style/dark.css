@@ -1,0 +1,138 @@
+:root{
+	--black1: #050114;
+	--black2: #191623;
+	--light: #A5ADFF;
+	--light1: #00FFFC;
+	--main: #00A9FF;
+	--color1: #344262;
+	--neg: white;
+}
+
+body::-webkit-scrollbar{
+	background-color: var(--black2);
+	box-shadow: -5px 0 5px var(--main) inset;
+	width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+	background-color: var(--black2);
+	box-shadow: 7px 0 5px var(--main) inset;
+	cursor: pointer;
+	border-top-left-radius: 25%;
+	border-bottom-left-radius: 25%;
+}
+
+body{
+	color: var(--light1) !important;
+}
+body *::selection{
+	background-color: var(--main) !important;
+	color: var(--black2);
+}
+.con-fl{
+	background-color: var(--black1);
+}
+nav, .home{
+	background-color: var(--black2);
+}
+
+.navbar-toggler{
+	border: solid var(--main) 2px !important;
+	background-color: var(--black1) !important;
+	color: var(--main);
+	outline: none !important;
+}
+.nav-link{
+	color: var(--light1) !important;
+}
+.nav-link.active{
+	color: var(--main) !important;
+	border-bottom: solid var(--main) 2px;
+}
+
+.brand-name{
+	color: var(--main) !important;
+}
+
+.more_btn{
+	background-color: var(--main) !important;
+	color: var(--black1) !important;
+}
+hr{
+	background-color: var(--main);
+}
+
+.text--default{
+	color: var(--light1);
+}
+
+.text--default *::selection{
+	background-color: var(--main) !important;
+	color: var(--black1);
+}
+
+.progress-pointer{
+	border: solid var(--main) 3px;
+}
+
+.education-container{
+	border-left: solid var(--main) 2px;
+}
+
+.education-container .circle{
+		border: solid var(--main) 3px;
+		background-color: var(--black1)
+}
+
+.projects-content, .projects-content{
+	background-color: var(--black2);
+	box-shadow: 0 0 10px var(--light1);
+}
+
+.projects-content i, .projects-content i{
+	color: var(--highlight);
+}
+
+.services-content, .projects-content{
+	background-color: var(--black2);
+	box-shadow: 0 0 10px var(--light1);
+}
+
+.services-content i, .projects-content i{
+	color: var(--highlight);
+}
+
+
+.anim-a, .anim-b{
+	background-color: var(--color1);
+}
+.contact{
+	background-image: radial-gradient(var(--main), var(--black2));
+	color: var(--light1)
+}
+.contact *::selection{
+	background-color: var(--light1) !important;
+}
+
+.social-icons i{
+	color: var(--light1) !important;
+}
+
+
+.programming-quote{
+	color: var(--light1);
+}
+fieldset{
+	border: solid var(--main) 3px !important;
+	color: var(--main);
+	padding: 5px !important;
+}
+fieldset legend{
+	width: fit-content;
+	padding: 0 0px;
+}
+
+.skill-container, .education-section{
+	box-shadow: 0 0 10px var(--main);
+	border-radius: 10px;
+}
