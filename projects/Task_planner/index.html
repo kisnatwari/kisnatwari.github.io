@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Fascinate Inline' rel='stylesheet'>
+	<title>Task Planner</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<HEADER>
+		<h1 style="font-size: 30px;">My Task planner</h1>
+		<h3 style="font-size: 20px; margin-top: 10px;">Plan your task of your whole day <br> Your tasks will expire on 12:00 A.M</h3>
+	</HEADER>
+	<section>
+		<div id="add-task-section">
+			<input id="add-task-text-box" type="text" placeholder="Add your new task here">
+			<br>
+			<h1 id='sel-pr'>Select Priority</h1>
+			<select id="priority-selector">
+				<option>High</option>
+				<option>Medium</option>
+				<option>Low</option>
+			</select><br>
+			<button id="add-task-btn" onclick="add_task()">Add Task</button>
+		</div><br><br><br>
+		<hr style="clear: left; width: 97%;margin: 0 auto;">
+		<div id="remaining-tasks-section" style="margin-top: 20px;margin-bottom: 20px;">
+			<h1 id="remaining-tasks-heading">View Your remaining tasks here</h1>
+			<!-- <div style="min-height: 60px;margin-bottom: 20px;text-align: center;background-color: inherit;color:white;padding:10px;box-shadow:0 0 5px white;border-radius: 20px;">
+				<h1 style="width: 100%;padding: 0; margin: 0;border: solid red 1px;">Tasks is shown Here</h1><br>
+				<i class="fa fa-trash" style="color: red;border: solid red 1px;margin: 0;"></i>
+				<i class="fa fa-trash"></i>
+			</div> -->
+		</div>
+		<div id="completed-tasks-section" style="margin-top: 20px;margin-bottom: 20px;">
+			<h1 id="completed-tasks-heading">View Your recently completed tasks here</h1>
+		</div>
+		<hr style="clear: left; width: 97%;margin: 0 auto;">
+		<footer>
+			<h1>&copy Copyright Krishna Tiwari</h1>
+		</footer>
+	</section>
+	<script type="text/javascript" src="compatible.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
