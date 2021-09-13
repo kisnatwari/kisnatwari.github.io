@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^asdf$ https://krishnat.com.np
